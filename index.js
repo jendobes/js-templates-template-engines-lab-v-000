@@ -12,16 +12,17 @@ function postComment() {
 
 function createPost() {
   let pageTemplate = _.template(document.getElementById('page-template').innerHTML)
-  let postTemplate = _.(document.getElementById('post-template').innerHTML)
+  let postTemplate = _.template(document.getElementById('post-template').innerHTML)
   let commentsTemplate = _.template(document.getElementById("comments-template").innerHTML);
+
   let author = document.getElementById('postAuthor').value
   let body = document.getElementById('postBody').value
   let title = document.getElementById('postTitle').value
-  
 
-  
 
-  let templateHTML = templateFn({'author': author, 'title': title, 'body': body})
+
+
+  let blogPost = postTemplate({'author': author, 'title': title, 'body': body})
 
   pageDiv.innerHTML += templateHTML
 }
