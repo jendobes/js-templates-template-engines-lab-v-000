@@ -11,5 +11,7 @@ function postComment() {
 }
 
 function createPost() {
-
+  let author = document.getElementById('postAuthor').value
+  let body = document.getElementById('postBody').value
+  let title = document.getElementById('postTitle').value
 }
