@@ -23,5 +23,6 @@ function createPost() {
   let blogComments = commetsTemplate()
   let postDiv = document.getElementById('post')
 
-  pageDiv.innerHTML += templateHTML
+  postDiv.innerHTML = blogPost
+  postElement.getElementsByTagName("footer")[0].innerHTML = commentsSection;
 }
