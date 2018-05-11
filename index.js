@@ -16,9 +16,9 @@ function createPost() {
   let title = document.getElementById('postTitle').value
   let postTemplate = document.getElementById('post-template').innerHTML
   let templateFn = _.template(postTemplate)
-  let postsDiv = document.getElementById('posts-template')
+  let pageDiv = document.getElementById('page-template')
 
-  let templateHTML = templateFn({'comment': comment, 'commenter': commenter})
+  let templateHTML = templateFn({'author': author, 'title': title, 'body': body})
 
-  postsDiv.innerHTML += templateHTML  
+  pageDiv.innerHTML += templateHTML
 }
