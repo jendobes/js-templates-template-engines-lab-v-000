@@ -19,6 +19,8 @@ function createPost() {
   let body = document.getElementById('postBody').value
   let title = document.getElementById('postTitle').value
 
+  document.getElementsByTagName("main")[0].innerHTML += pageTemplate();
+
   let blogPost = postTemplate({'author': author, 'title': title, 'body': body})
   let blogComments = commentsTemplate()
   let postDiv = document.getElementById('post')
