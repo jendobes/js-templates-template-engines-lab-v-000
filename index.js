@@ -16,7 +16,7 @@ function createPost() {
   let title = document.getElementById('postTitle').value
   let postTemplate = document.getElementById('post-template').innerHTML
   let templateFn = _.template(postTemplate)
-  let pageDiv = document.getElementById('page-template')
+  let pageTemplate = _.template(document.getElementById('page-template'))
 
   let templateHTML = templateFn({'author': author, 'title': title, 'body': body})
 
