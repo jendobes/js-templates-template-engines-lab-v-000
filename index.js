@@ -20,7 +20,7 @@ function createPost() {
   let title = document.getElementById('postTitle').value
 
   let blogPost = postTemplate({'author': author, 'title': title, 'body': body})
-  let blogComments = commetsTemplate()
+  let blogComments = commentsTemplate()
   let postDiv = document.getElementById('post')
 
   postDiv.innerHTML = blogPost
