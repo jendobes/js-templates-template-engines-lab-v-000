@@ -21,6 +21,7 @@ function createPost() {
 
   let blogPost = postTemplate({'author': author, 'title': title, 'body': body})
   let blogComments = commetsTemplate()
+  let postDiv = document.getElementById('post')
 
   pageDiv.innerHTML += templateHTML
 }
