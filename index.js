@@ -19,10 +19,8 @@ function createPost() {
   let body = document.getElementById('postBody').value
   let title = document.getElementById('postTitle').value
 
-
-
-
   let blogPost = postTemplate({'author': author, 'title': title, 'body': body})
+  let blogComments = commetsTemplate()
 
   pageDiv.innerHTML += templateHTML
 }
